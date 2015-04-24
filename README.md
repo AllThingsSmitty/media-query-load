@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Media Query Load
 
 Here is a quick idea about making media queries not only apply styles according to certain criteria being met, but also loading the resources needed on demand.
@@ -50,7 +49,3 @@ mediaQueryLoad();
 * We use `querySelectorAll` to get all the elements that need the media query checks and loop over them (using a reverse while loop).
 * We test if the element has a `data-media` property and if the query defined in it is true.
 * We then loop through all `data-*` prefixed attributes and add a non-prefixed attribute with its value (omitting the media one).
-=======
-# media-query-load
-Conditional loading of CSS using media queries
->>>>>>> origin/master
