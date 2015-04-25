@@ -49,3 +49,8 @@ mediaQueryLoad();
 * We use `querySelectorAll` to get all the elements that need the media query checks and loop over them (using a reverse while loop).
 * We test if the element has a `data-media` property and if the query defined in it is true.
 * We then loop through all `data-*` prefixed attributes and add a non-prefixed attribute with its value (omitting the media one).
+
+
+### `matchMedia()` support
+
+Current versions Chrome, Firefox, and Safari and IE10+ support [`matchMedia`](http://caniuse.com/#search=matchmed).
