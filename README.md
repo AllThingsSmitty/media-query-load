@@ -18,7 +18,7 @@ Instead of applying the CSS with a `<link>` element with a `href` which causes t
 <link rel="stylesheet" class="mediaQueryDependent" 
   data-media="screen and (min-width: 600px)" 
   data-href="css/green.css">
-<link rel="stylesheet" class="mediaquerydependent" 
+<link rel="stylesheet" class="mediaQueryDependent" 
   data-media="screen and (min-width: 4000px)" 
   data-href="css/blue.css">
 ```
