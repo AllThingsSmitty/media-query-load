@@ -4,7 +4,7 @@ Here is a quick idea about making media queries not only apply styles according 
 
 ### Using `matchMedia()`
 
-Using `matchMedia` you can execute blocks of JavaScript only when a certain media query condition is met. This means you could just write out the CSS when and if the query is true:
+Using `matchMedia` lets you execute blocks of JavaScript only when a certain media query condition is met. This means you could just write out the CSS when and if the query is true:
 
 ```javascript
 if (window.matchMedia('screen and (min-width: 600px)')) {
@@ -12,7 +12,7 @@ if (window.matchMedia('screen and (min-width: 600px)')) {
 }
 ```
 
-Instead of applying the CSS with a `<link>` element with a `href` which causes the undesired loading we'll use `data-*` attributes instead. Anything we want dependent on the query will get a `data-` prefix:
+However, nstead of applying the CSS with a `<link>` element with a `href` which causes the undesired loading we'll use `data-*` attributes instead. Anything we want dependent on the query will get a `data-` prefix:
 
 ```html
 <link rel="stylesheet" class="mediaQueryDependent" 
@@ -23,16 +23,16 @@ Instead of applying the CSS with a `<link>` element with a `href` which causes t
   data-href="css/blue.css">
 ```
 
-The `mediaQueryLoad()` function will loop through all the elements we want to change, evaluate their media queries, and change the `data-` prefixed attributes back to real ones. This is that script:
+The `mediaQueryLoad()` function will loop through all the elements we want to change, evaluate their media queries, and change the `data-` prefixed attributes back to real ones:
 
 ```javascript
 function mediaQueryLoad() {
-  var queriedresource = document.querySelectorAll('.mediaQueryDependent'),
-    all = queriedresource.length,
+  var queriedResource = document.querySelectorAll('.mediaQueryDependent'),
+    all = queriedResource.length,
     current = null,
     attr = null;
   while (all--) {
-    current = queriedresource[all];
+    current = queriedResource[all];
     if (current.dataset.media &&
         window.matchMedia(current.dataset.media).matches) {
       for (attr in current.dataset) {
