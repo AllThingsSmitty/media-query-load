@@ -12,7 +12,7 @@ if (window.matchMedia('screen and (min-width: 600px)')) {
 }
 ```
 
-However, nstead of applying the CSS with a `<link>` element with a `href` which causes the undesired loading we'll use `data-*` attributes instead. Anything we want dependent on the query will get a `data-` prefix:
+However, instead of applying the CSS with a `<link>` element with a `href` which causes the undesired loading we'll use `data-*` attributes instead. Anything we want dependent on the query will get a `data-` prefix:
 
 ```html
 <link rel="stylesheet" class="mediaQueryDependent" 
