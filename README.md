@@ -1,10 +1,12 @@
 # Media Query Load
 
-Here is a quick idea about making media queries not only apply styles according to certain criteria being met, but also loading the resources needed on demand.
+Media queries apply CSS rules when certain conditions are met in the browser. However, even when media queries are defined for specific CSS resources, e.g., `media="screen and (min-width: 600px)" href="css/small.css"`, the browser will load _all_ CSS resources regardless if they apply or not. That's a performance problem and unnecessary.
+
+What's needed is to make media queries not only apply styles according to certain criteria being met but also load the CSS resources needed on-demand.
 
 ### Using `matchMedia()`
 
-Using `matchMedia` lets you execute blocks of JavaScript only when a certain media query condition is met. This means you could just write out the CSS when and if the query is true:
+`matchMedia` lets you execute blocks of JavaScript only when a certain media query condition is met. This means you can just write out the CSS when and if the query is true:
 
 ```javascript
 if (window.matchMedia('screen and (min-width: 600px)')) {
@@ -31,7 +33,7 @@ function mediaQueryLoad() {
     all = queriedResource.length,
     current = null,
     attr = null;
-  while (all--) {
+  while (all) {
     current = queriedResource[all];
     if (current.dataset.media &&
         window.matchMedia(current.dataset.media).matches) {
@@ -51,6 +53,6 @@ mediaQueryLoad();
 * We then loop through all `data-*` prefixed attributes and add a non-prefixed attribute with its value (omitting the media one).
 
 
-### `matchMedia()` support
+### Support
 
 Current versions Chrome, Firefox, and Safari and IE10+ support [`matchMedia`](http://caniuse.com/#search=matchmed).
