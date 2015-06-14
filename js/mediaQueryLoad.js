@@ -3,7 +3,7 @@ function mediaQueryLoad() {
     all = queriedResource.length,
     current = null,
     attr = null;
-  while (all) {
+  while (all--) {
     current = queriedResource[all];
     if (current.dataset.media &&
         window.matchMedia(current.dataset.media).matches) {
