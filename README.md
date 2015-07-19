@@ -57,4 +57,4 @@ Here's what this function is doing:
 
 ### Support
 
-Current versions Chrome, Firefox, and Safari, and IE10+ support [`matchMedia`](http://caniuse.com/#search=matchmed).
+Current versions of Chrome, Firefox, and Safari, and IE10+ support `matchMedia`. [Read more](http://caniuse.com/#search=matchmed).
