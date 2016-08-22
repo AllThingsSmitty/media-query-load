@@ -25,10 +25,10 @@ However, instead of applying the CSS with a `<link>` element with a `href` which
   data-href="css/blue.css">
 ```
 
-The `mediaQueryLoad()` function will loop through all the elements we want to change, evaluate their media queries, and change the `data-` prefixed attributes back to real ones:
+The function will loop through all the elements we want to change, evaluate their media queries, and change the `data-` prefixed attributes back to real ones:
 
 ```javascript
-function mediaQueryLoad() {
+(function () {
   var queriedResource = document.querySelectorAll('.mediaQueryDependent'),
     all = queriedResource.length,
     current = null,
@@ -44,8 +44,7 @@ function mediaQueryLoad() {
       }
     }
   }
-}
-mediaQueryLoad();
+}());
 ```
 
 Here's what this function is doing:
