@@ -1,4 +1,4 @@
-function mediaQueryLoad() {
+(function () {
   var queriedResource = document.querySelectorAll('.mediaQueryDependent'),
     all = queriedResource.length,
     current = null,
@@ -14,5 +14,4 @@ function mediaQueryLoad() {
       }
     }
   }
-}
-mediaQueryLoad();
+}());
