@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Conditional loading success</title>
+  <link rel="stylesheet" href="css/standard.css">
   <link rel="stylesheet" class="mediaQueryDependent" href="css/standard.css"
     data-media="screen and (min-width: 600px)"
     data-href="css/green.css">
   <link rel="stylesheet" class="mediaQueryDependent"
-    data-media="screen and (min-width: 4000px)"
+    data-media="screen and (min-width: 1000px)"
     data-href="css/blue.css">
 </head>
 <body>
-  <p>Test document has a light green background - when your browser is more than 600 pixels wide it gets a green background and you'll see an image below. Browsers over 4000 pixels wide have a blue background. Neither the CSS nor the image will be loaded in browsers less than 600 pixels wide.</p>
+  <p>Test document has a light green background - when your browser is more than 600 pixels wide it gets a green background and you'll see an image below. Browsers over 1000 pixels wide have a blue background. Neither the CSS nor the image will be loaded in browsers less than 600 pixels wide.</p>
   <img data-src="http://placekitten.com/g/200/300"
     data-alt="kitten"
     class="mediaQueryDependent"
